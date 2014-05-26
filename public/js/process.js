@@ -3,6 +3,7 @@ var GlobalSupervisor
 var GlobalAction
 var GlobarUserId
 var GlobalEmployeeName
+var GlobalCompany
 
 $(document).ready(function () {
     $('#datetimepicker').datetimepicker({
@@ -37,8 +38,6 @@ $(document).ready(function () {
                     window.clearInterval(1)
                 }, 200);
             });
-
-            retrieveListEmployee('');
         }
     });
     
@@ -58,7 +57,8 @@ function retrieveListEmployee(search) {
         url: "employeeActions",
         data: {
             name: search,
-            localTimezone: localTimezone
+            localTimezone: localTimezone,
+            company:GlobalCompany
         },
         success: function (msg) {
             console.log(msg);
@@ -205,6 +205,11 @@ $(function () {
                         );
 
                         currentTimeId = data[0].CurrentTimeId;
+
+                        // request to get table
+                        GlobalCompany = data[0].Company;
+                        retrieveListEmployee('');
+
                     }
                     else {
                         toastr.error("Incorrect password!", "ERROR");

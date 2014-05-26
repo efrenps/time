@@ -78,19 +78,6 @@
     </div>
 
     <div class="slide" id="slide1" data-slide="1">
-        <div style="background-color: #0F1620; width: 550px; height: 88px; float: right; margin-top: 40px; margin-right: 20px; vertical-align: middle; opacity: 0.9; border-radius: 6px">
-            <div style="color: #CACACA; padding-top: 20px; padding-right: 40px; text-align: right; ">
-                <label style="font-family: 'Duru Sans', sans-serif; font-size: x-large;  font-weight: bolder; "> Search by Name </label>
-            </div>
-
-            <div style="text-align:left">
-                <input id="searchEmployeList" type="text" name="searchEmployeList" class="searchForList" placeholder="Type a name and press enter." value="" />
-            </div>
-
-            <div id="listEmployeeTable" class="listEmployeeTable" style="height: 376px;width:100%; overflow:auto">
-            </div>
-        </div>
-
         <div id='content'>
             <section class='input'>
                 <div class="fancyInput" style="height:80px;">
@@ -120,11 +107,24 @@
     <!--End Slide 2-->
 
     <div class="slide" id="slide3" data-slide="3">
-        <div style="background-color: #0F1620; width: 500px; height: 70px; float: right; margin-top: 40px; vertical-align: middle; opacity: 0.7; border-radius: 6px">
+        <!-- div style="display:none; background-color: #0F1620; width: 500px; height: 70px; float: right; margin-top: 40px; vertical-align: middle; opacity: 0.7; border-radius: 6px">
             <div style="color: #CACACA; padding-top: 20px; padding-right: 40px; text-align: right; ">
                 <label style="font-family: 'Duru Sans', sans-serif; font-size: x-large;  font-weight: bolder; ">Start or stop tracking your time</label>
             </div>
+        </div -->
+        <div style="background-color: #0F1620; width: 550px; height: 88px; float: right; margin-top: 40px; margin-right: 20px; vertical-align: middle; opacity: 0.9; border-radius: 6px">
+            <div style="color: #CACACA; padding-top: 20px; padding-right: 40px; text-align: right; ">
+                <label style="font-family: 'Duru Sans', sans-serif; font-size: x-large;  font-weight: bolder; "> Search by Name </label>
+            </div>
+
+            <div style="text-align:left">
+                <input id="searchEmployeList" type="text" name="searchEmployeList" class="searchForList" placeholder="Type a name and press enter." value="" />
+            </div>
+
+            <div id="listEmployeeTable" class="listEmployeeTable" style="height: 376px;width:100%; overflow:auto">
+            </div>
         </div>
+
 
         <div>
             <div id="divstart" style="position: absolute; top: 55%; left: 10%; margin-top: -50px; margin-left: -40px; width: 300px; height: 80px;" class="hide">

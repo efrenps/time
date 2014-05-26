@@ -43,13 +43,15 @@ class UserTablesController extends BaseController {
         $name = Input::get('name');
         $name = $name.'%';
         $data = array();
+        $company = Input::get('company');
 
         if ($name != null | $name != '') {
             $tsql = DB::select( DB::raw("SELECT FirstName, LastName, HoursWorked, TimeIn, TimeOut, ReasonLeave 
                                 FROM UsersTable as u LEFT JOIN EmployeeAttendance ON u.UserID = EmployeeAttendance.UserId
-                                WHERE FirstName + ' ' + LastName LIKE :value AND CompanyCode = 1
+                                WHERE FirstName + ' ' + LastName LIKE :value1 AND CompanyCode = :value2
                                 ORDER BY TimeId DESC"), array(
-                                'value' => $name,
+                                'value1' => $name,
+                                'value2' => $company,
                     ));
         } else {
             $tsql = DB::table('UsersTable')
@@ -137,10 +139,12 @@ class UserTablesController extends BaseController {
         $error = 0;//empty employee
         $data[] = array('FirstName' => $employee->FirstName, 
                      'FullName' => $employee->FirstName . ' ' . $employee->LastName,
+                     'Company' => $employee->CompanyCode,
                      'type' => $employee->IsSupervisor,
                      'Action' => $workStatus,
                      'error' => $error); 
 
+        
         return json_encode($data);
 
     }
