@@ -74,23 +74,23 @@ return array(
 			'schema'   => 'public',
 		),
         
-        'sqlsrv' => array(
-			'driver'   => 'sqlsrv',
-			'host'     => 'db.digital-officespace.com:5001',
-                        //'port'     => '5002',
-			'database' => 'DMSData',
-			'username' => 'website',
-			'password' => 'MyWebsitePassword12345',
-			'prefix'   => '',
-		), 
-		/*'sqlsrv' => array(
-			'driver'   => 'sqlsrv',
-			'host'     => 'JUANMA',
-			'database' => 'laravel',	
-			'username' => 'php_user',
-			'password' => 'martinez2010*',
-			'prefix'   => '',
-		), */
+  //       'sqlsrv' => array(
+		// 	'driver'   => 'sqlsrv',
+		// 	'host'     => 'db.digital-officespace.com'.(PHP_OS == 'WINNT' ? ',' : ':').'5001',
+  //                       //'port'     => '5002',
+		// 	'database' => 'DMSData',
+		// 	'username' => 'website',
+		// 	'password' => 'MyWebsitePassword12345',
+		// 	'prefix'   => '',
+		// ), 
+		'sqlsrv' => array(
+                'driver'   => 'sqlsrv',
+                'host'     => 'dev.digital-officespace.com'.(PHP_OS == 'WINNT' ? ',' : ':').'5002',
+                'database' => 'DMSData',
+                'username' => 'developer',
+                'password' => 'NewP@55w0rd1234567',
+                'prefix'   => '',
+        ),
 
 	),
 
